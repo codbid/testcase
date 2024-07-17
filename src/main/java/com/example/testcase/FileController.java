@@ -28,4 +28,9 @@ public class FileController {
     public ResponseEntity<Object> testcaseGet(@RequestParam int id) {
         return fileRepository.getFileById(id);
     }
+
+    @GetMapping("/testcase/all")
+    public ResponseEntity<Object> testcaseGetAll(@RequestParam(defaultValue = "5") int size, @RequestParam(defaultValue = "0") int page) {
+        return fileRepository.getAllFiles(size, page);
+    }
 }

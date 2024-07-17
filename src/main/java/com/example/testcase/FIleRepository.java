@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.Base64;
+import java.util.List;
 
 @Repository
 public class FIleRepository {
@@ -49,5 +50,19 @@ public class FIleRepository {
         } catch (EmptyResultDataAccessException e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("File with id " + id + " not found");
         }
+    }
+
+    public ResponseEntity<Object> getAllFiles(int limit, int offset) {
+        String sql = "SELECT * FROM files ORDER BY creation_date DESC LIMIT ? OFFSET ?";
+        List<File> files = jdbcTemplate.query(sql, new Object[]{limit, offset * limit}, (rs, rowNum) -> {
+            File f = new File();
+            f.setId(rs.getInt("id"));
+            f.setFile(Base64.getEncoder().encodeToString(rs.getBytes("file")));
+            f.setTitle(rs.getString("title"));
+            f.setCreation_date(rs.getString("creation_date"));
+            f.setDescription(rs.getString("description"));
+            return f;
+        });
+        return ResponseEntity.ok(files);
     }
 }
