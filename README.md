@@ -45,7 +45,7 @@
    Content-Type: application/json  
   
    {  
-     "file": "<base64-encoded file>",  
+     "file": "base64-encoded file",  
      "title": "New file",  
      "description": "File description"  
    }  
@@ -70,7 +70,7 @@
    Content-Type: application/json  
   
    {  
-     "file": "<base64-encoded file>",  
+     "file": "base64-encoded file",  
      "title": "New file",  
      "creation_date": "2024-07-18 01:11:45.317668",  
      "description": "File description"  
@@ -90,22 +90,22 @@
 
    [  
       {  
-        "file": "<base64-encoded file>",  
-        "title": "New file3",  
+        "file": "base64-encoded file6",  
+        "title": "New file6",  
         "creation_date": "2024-07-18 01:11:45.317668",  
-        "description": "File3 description"  
+        "description": "File6 description"  
       }  
       {  
-        "file": "<base64-encoded file>",  
-        "title": "New file2",  
+        "file": "base64-encoded file5",  
+        "title": "New file5",  
         "creation_date": "2024-07-18 00:49:27.002648",  
-        "description": "File2 description"  
+        "description": "File5 description"  
       }  
       {  
-        "file": "<base64-encoded file>",  
-        "title": "New file1",  
+        "file": "base64-encoded file4",  
+        "title": "New file4",  
         "creation_date": "2024-07-18 00:02:58.48922",  
-        "description": "File1 description"  
+        "description": "File4 description"  
       }  
    ]  
    </pre>
