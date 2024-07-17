@@ -1,6 +1,7 @@
 package com.example.testcase;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,12 +20,12 @@ public class FileController {
     }
 
     @PostMapping("/testcase")
-    public int testcasePost(@RequestBody File file) {
+    public ResponseEntity<Object> testcasePost(@RequestBody File file) {
         return fileRepository.addFile(file);
     }
 
     @GetMapping("/testcase")
-    public File testcaseGet(@RequestParam int id) {
+    public ResponseEntity<Object> testcaseGet(@RequestParam int id) {
         return fileRepository.getFileById(id);
     }
 }
