@@ -94,13 +94,13 @@
         "title": "New file6",  
         "creation_date": "2024-07-18 01:11:45.317668",  
         "description": "File6 description"  
-      }  
+      },  
       {  
         "file": "base64-encoded file5",  
         "title": "New file5",  
         "creation_date": "2024-07-18 00:49:27.002648",  
         "description": "File5 description"  
-      }  
+      },  
       {  
         "file": "base64-encoded file4",  
         "title": "New file4",  
